@@ -28,7 +28,7 @@ noButton.addEventListener("click", function () {
 
 function handleYesClick() {
   let messages = [
-    "Happy birthday B!!.",
+    "Happy birthday B!!",
     "I wish you lots of happiness.",
     "Grade A's in all subjects.",
     "Keep fighting and soon you will graduate."
@@ -48,16 +48,23 @@ function handleYesClick() {
       messageElement.style.padding = "10px"; // เพิ่ม padding ให้ข้อความ
       messageElement.style.marginBottom = "5px"; // เพิ่มระยะห่างระหว่างข้อความ
       messageElement.style.borderRadius = "15px"; // ทำให้ขอบมน
-      
+
       // เพิ่มข้อความใหม่ลงใน titleElement
       titleElement.appendChild(messageElement);
     }, index * 1000); // เวลารอ 1 วินาทีต่อข้อความ
   });
 
+  // ซ่อนปุ่ม
   buttonsContainer.classList.add("hidden");
-  changeImage("yes");
-}
 
+  // เปลี่ยนรูปภาพ
+  changeImage("yes");
+
+  // เปลี่ยนพื้นหลังของหน้าเว็บ
+  document.body.style.backgroundImage = "url('https://img.freepik.com/free-vector/realistic-happy-birthday-black-golden_1361-3241.jpg')";
+  document.body.style.backgroundSize = "cover"; // ทำให้ภาพพื้นหลังครอบคลุมทั้งหน้าเว็บ
+  document.body.style.backgroundPosition = "center"; // จัดตำแหน่งพื้นหลังให้อยู่ตรงกลาง
+}
 
 function resizeYesButton() {
   const computedStyle = window.getComputedStyle(yesButton);

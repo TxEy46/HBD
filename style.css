@@ -26,9 +26,23 @@ body {
   justify-content: center;
 }
 
+.yes-img {
+  width: 20%;  /* ขนาดเริ่มต้น */
+  height: auto;  /* รักษาอัตราส่วนของภาพ */
+}
+
+.yes-img-large {
+  width: 50%;  /* ขนาดใหญ่ที่ต้องการ */
+  height: auto;  /* รักษาอัตราส่วนของภาพ */
+}
+
+.hidden {
+  display: none;
+}
+
 .cat-img {
   width: 30rem;
-  height: 40rem;
+  height: 30rem;
   margin-bottom: 2rem;
 }
 
